@@ -3,7 +3,7 @@ package com.stack;
 /**
  * Created by Jainish on 05-03-2017.
  */
-public class Stack {
+public class Stack implements Cloneable {
     static final int MAX = 100; //we cannot change this value
     int a[] = new int[MAX];
     int top;
@@ -12,8 +12,18 @@ public class Stack {
         top = -1;
     }
 
+    public Object clone() throws
+            CloneNotSupportedException
+    {
+        return super.clone();
+    }
+
     boolean isEmpty() {
         return (top<0);
+    }
+
+    int top() {
+        return a[top];
     }
 
     public boolean push(int data){
