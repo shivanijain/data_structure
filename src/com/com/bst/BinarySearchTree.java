@@ -20,6 +20,19 @@ public class BinarySearchTree {
         inorder(root.right);
     }
 
+    public void search( Node root, int key) {
+        if( root == null ) { System.out.println("No data found."); return;}
+        if( root.data == key ){
+            System.out.println("data is found.");
+        }else if( key < root.data ){
+            search(root.left,key);
+        } else if( key > root.data ){
+            search( root.right,key);
+        } else {
+            System.out.println("No data found.");
+        }
+    }
+
     public Node insert(Node root,int key){
         if( root == null ) return new Node(key);
 
@@ -49,5 +62,7 @@ public class BinarySearchTree {
 
         // print inorder traversal of the BST
         tree.inorder(root);
+
+        tree.search(root,5);
     }
 }
