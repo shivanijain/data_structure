@@ -63,7 +63,7 @@ public class connectSameLevel {
                 + c);
         int d = root.left.left.nextRight != null ?
                 root.left.left.nextRight.data : -1;
-        System.out.println("nextRight of " + root.left.left.data + " is "
+        System.out.println("nextRight something of " + root.left.left.data + " is "
                 + d);
 
     }
